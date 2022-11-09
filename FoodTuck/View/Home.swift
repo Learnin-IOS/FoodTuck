@@ -65,7 +65,7 @@ struct Home: View {
             HStack{
                 Menu(homeData: HomeModel)
                 // Move efect from left
-                    .offset(x: HomeModel.showMenu ? 0 : UIScreen.main.bounds.width / 1.0)
+                    .offset(x: HomeModel.showMenu ? 0 : -UIScreen.main.bounds.width / 1.45)
                 Spacer(minLength: 0)
             }
             .background(Color.black.opacity(HomeModel.showMenu ? 0.3 : 0).ignoresSafeArea()

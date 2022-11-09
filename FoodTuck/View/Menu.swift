@@ -44,7 +44,8 @@ struct Menu: View {
             .padding(10 )
             
         }
-        .frame(width: UIScreen.main.bounds.width / 1.6)
+        .padding([.top, .trailing])
+        .frame(width: UIScreen.main.bounds.width / 1.45)
         .background(Color.white.ignoresSafeArea())
     }
 }
