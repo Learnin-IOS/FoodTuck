@@ -16,7 +16,7 @@ struct Home: View {
                 HStack(spacing: 15){
 
                     Button {
-                        
+                        withAnimation(.easeIn){HomeModel.showMenu.toggle()}
                     } label: {
                         Image(systemName: "line.3.horizontal")
                             .font(.title)
@@ -59,6 +59,21 @@ struct Home: View {
                 Spacer()
                 
             }
+            
+            // Slide Menu
+            
+            HStack{
+                Menu(homeData: HomeModel)
+                // Move efect from left
+                    .offset(x: HomeModel.showMenu ? 0 : UIScreen.main.bounds.width / 1.0)
+                Spacer(minLength: 0)
+            }
+            .background(Color.black.opacity(HomeModel.showMenu ? 0.3 : 0).ignoresSafeArea()
+                        // Closing when taps outside
+                .onTapGesture {
+                    withAnimation(.easeIn){HomeModel.showMenu.toggle()}
+                }
+            )
             
             // Non Closable alert if permission is denied
             if HomeModel.noLocation {
