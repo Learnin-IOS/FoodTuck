@@ -13,14 +13,8 @@ struct ContentView: View {
     var body: some View {
         Home()
             .onAppear(perform: {
-                
                        // Calling Localized Delegate
-                       
                        HomeModel.locationManager.delegate = HomeModel
-                       HomeModel.locationManager.requestAlwaysAuthorization()
-                       
-                       // Modifying Info.plist
-                       
             })
     }
 }
