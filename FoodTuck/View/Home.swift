@@ -8,13 +8,57 @@
 import SwiftUI
 
 struct Home: View {
+    @StateObject var HomeModel = HomeViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 10){
+            HStack(spacing: 15){
+
+                Button {
+                    
+                } label: {
+                    Image(systemName: "line.3.horizontal")
+                        .font(.title)
+                        .foregroundColor(Color("PrimaryColor"))
+                }
+
+                Text("Deliver to")
+                    .foregroundColor(.black)
+                
+                Text("Apple")
+                    .font(.caption)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color("PrimaryColor"))
+                
+                Spacer(minLength: 0)
+            }
+            .padding([.horizontal, .top])
+             
+            Divider()
+            
+            HStack(spacing: 15){
+                TextField("Search", text: $HomeModel.search)
+                
+                if HomeModel.search != "" {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "magnifyingglass")
+                            .font(.title2)
+                            .foregroundColor(.gray)
+                    }
+                    .animation(.easeIn, value: 0.3)
+                }
+            }
+            .padding(.horizontal)
+            .padding(.top, 10)
+            
+            Divider()
+            
+            Spacer()
+            
+        }
     }
+        
 }
 
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        Home()
-    }
-}

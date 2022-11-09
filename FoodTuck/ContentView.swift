@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var HomeModel = HomeViewModel()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        Home()
+            .onAppear(perform: {
+                
+                       // Calling Localized Delegate
+                       
+                       HomeModel.locationManager.delegate = HomeModel
+                       HomeModel.locationManager.requestAlwaysAuthorization()
+                       
+                       // Modifying Info.plist
+                       
+            })
     }
 }
 

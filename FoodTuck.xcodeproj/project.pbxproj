@@ -14,6 +14,8 @@
 		8F2A7655291BC0E40020AA52 /* FoodTuckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A7654291BC0E40020AA52 /* FoodTuckTests.swift */; };
 		8F2A765F291BC0E40020AA52 /* FoodTuckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A765E291BC0E40020AA52 /* FoodTuckUITests.swift */; };
 		8F2A7661291BC0E40020AA52 /* FoodTuckUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A7660291BC0E40020AA52 /* FoodTuckUITestsLaunchTests.swift */; };
+		8F2A7671291BC1710020AA52 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A7670291BC1710020AA52 /* Home.swift */; };
+		8F2A7673291BC3860020AA52 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A7672291BC3860020AA52 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		8F2A765A291BC0E40020AA52 /* FoodTuckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTuckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2A765E291BC0E40020AA52 /* FoodTuckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTuckUITests.swift; sourceTree = "<group>"; };
 		8F2A7660291BC0E40020AA52 /* FoodTuckUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTuckUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8F2A7670291BC1710020AA52 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		8F2A7672291BC3860020AA52 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,9 @@
 		8F2A7642291BC0E20020AA52 /* FoodTuck */ = {
 			isa = PBXGroup;
 			children = (
+				8F2A766F291BC1480020AA52 /* ViewModel */,
+				8F2A766E291BC1360020AA52 /* Model */,
+				8F2A766D291BC11A0020AA52 /* View */,
 				8F2A7643291BC0E20020AA52 /* FoodTuckApp.swift */,
 				8F2A7645291BC0E20020AA52 /* ContentView.swift */,
 				8F2A7647291BC0E40020AA52 /* Assets.xcassets */,
@@ -125,6 +132,29 @@
 				8F2A7660291BC0E40020AA52 /* FoodTuckUITestsLaunchTests.swift */,
 			);
 			path = FoodTuckUITests;
+			sourceTree = "<group>";
+		};
+		8F2A766D291BC11A0020AA52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F2A7670291BC1710020AA52 /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8F2A766E291BC1360020AA52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8F2A766F291BC1480020AA52 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8F2A7672291BC3860020AA52 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +288,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F2A7646291BC0E20020AA52 /* ContentView.swift in Sources */,
+				8F2A7671291BC1710020AA52 /* Home.swift in Sources */,
 				8F2A7644291BC0E20020AA52 /* FoodTuckApp.swift in Sources */,
+				8F2A7673291BC3860020AA52 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +451,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FoodTuck/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please Allow to read location for Delivery";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please Allow to read location for Delivery";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -447,6 +481,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FoodTuck/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Please Allow to read location for Delivery";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please Allow to read location for Delivery";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

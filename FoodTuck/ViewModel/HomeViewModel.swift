@@ -6,15 +6,29 @@
 //
 
 import SwiftUI
+import CoreLocation
 
-struct HomeViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+// MARK: - Fetching User Location
+class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
+    
+    @Published var locationManager = CLLocationManager()
+    @Published var search = ""
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        // Checking Location access
+        
+        switch manager.authorizationStatus {
+        case .authorizedWhenInUse:
+            print("Authorized")
+        case .denied:
+            print("denied")
+        default:
+            print("Unknown")
+        }
     }
-}
-
-struct HomeViewModel_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeViewModel()
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
     }
 }
