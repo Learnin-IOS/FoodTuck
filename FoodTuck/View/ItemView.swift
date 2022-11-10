@@ -18,6 +18,7 @@ struct ItemView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: UIScreen.main.bounds.width -  30, height: 250)
+                .cornerRadius(6)
             
             HStack(spacing: 8){
                 Text(item.item_name)
@@ -38,7 +39,7 @@ struct ItemView: View {
                 Text(item.item_details)
                     .font(.caption)
                     .foregroundColor(.gray)
-                    .lineLimit(2)
+                    .lineLimit(4)
                 
                 Spacer(minLength: 0)
             }

@@ -25,8 +25,8 @@ class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
      @Published var showMenu = false
     
     // ItemData
-    
     @Published var items: [Item] = []
+    @Published var filtered: [Item] = []
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         // Checking Location access
         
@@ -110,12 +110,24 @@ class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
                 let id = doc.documentID
                 let name = doc.get("item_name") as! String
                 let cost = doc.get("item_cost") as! NSNumber
-                let ratings = doc.get("item_ratings") as! String
                 let details = doc.get("item_details") as! String
                 let image = doc.get("item_image") as! String
+                let rating = doc.get("item_rating") as! String
                 
-                return Item(id: id, item_name: name, item_details: details, item_cost: cost, item_rating: ratings, item_image: image)
+                return Item(id: id, item_name: name, item_details: details, item_cost: cost, item_rating: rating, item_image: image)
             })
+            
+            self.filtered = self.items
+        }
+    }
+    
+    // Search or Filter
+    
+    func filterData(){
+        withAnimation(.linear){
+            self.filtered = self.items.filter{
+                return $0.item_name.lowercased().contains(self.search.lowercased())
+            }
         }
     }
     

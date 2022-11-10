@@ -38,18 +38,12 @@ struct Home: View {
                 Divider()
                 
                 HStack(spacing: 15){
-                    TextField("Search", text: $HomeModel.search)
                     
-                    if HomeModel.search != "" {
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "magnifyingglass")
-                                .font(.title2)
-                                .foregroundColor(.gray)
-                        }
-                        .animation(.easeIn, value: 0.3)
-                    }
+                    Image(systemName: "magnifyingglass")
+                        .font(.title2)
+                        .foregroundColor(.gray)
+                    
+                    TextField("Search", text: $HomeModel.search)
                 }
                 .padding(.horizontal)
                 .padding(.top, 10)
@@ -60,7 +54,7 @@ struct Home: View {
                     
                     VStack(spacing: 25){
                          
-                        ForEach(HomeModel.items){ item in
+                        ForEach(HomeModel.filtered){ item in
                             // Item View
                             ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
                                 ItemView(item: item )
@@ -71,6 +65,9 @@ struct Home: View {
                                         .padding(.vertical, 10)
                                         .padding(.horizontal)
                                         .background(Color("PrimaryColor"))
+                                        .clipShape(CShape())
+
+                                    
                                     Spacer(minLength: 0)
                                     
                                     Button {
@@ -104,7 +101,7 @@ struct Home: View {
                 Spacer(minLength: 0)
             }
             .background(Color.black.opacity(HomeModel.showMenu ? 0.3 : 0).ignoresSafeArea()
-                        // Closing when taps outside
+            // Closing when taps outside
                 .onTapGesture {
                     withAnimation(.easeIn){HomeModel.showMenu.toggle()}
                 }
@@ -121,7 +118,41 @@ struct Home: View {
                     .background(Color.black.opacity(0.3).ignoresSafeArea())
             }
         }
+        .onAppear {
+            // calling location delegate
+            HomeModel.locationManager.delegate = HomeModel
+        }
+        .onChange(of: HomeModel.search) { value in
+            
+            // to avoid continued searched requests
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                
+                if value == HomeModel.search && HomeModel.search != ""{
+                    // Search Data ...
+                    
+                    HomeModel.filterData()
+                    
+                    
+                }
+                
+            }
+            
+            if HomeModel.search == "" {
+                // reset all data
+                withAnimation(.linear){HomeModel.filtered = HomeModel.items}
+            }
+        }
     }
         
 }
 
+// MARK: - Shape
+struct CShape : Shape{
+    
+    func path(in rect : CGRect) ->  Path{
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [.topRight, .bottomRight], cornerRadii: CGSize(width: 35, height: 35))
+        
+        return Path(path.cgPath)
+        
+    }
+}
