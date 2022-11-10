@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C7160930B83CD5A8F6CE0D6 /* Pods_FoodTuckTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C05C5B524710F3E69DC67F /* Pods_FoodTuckTests.framework */; };
+		23C61842278E31B0E8F8971F /* Pods_FoodTuck_FoodTuckUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B17EB673BAF3AE197C47135E /* Pods_FoodTuck_FoodTuckUITests.framework */; };
 		8F2A7644291BC0E20020AA52 /* FoodTuckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A7643291BC0E20020AA52 /* FoodTuckApp.swift */; };
 		8F2A7646291BC0E20020AA52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A7645291BC0E20020AA52 /* ContentView.swift */; };
 		8F2A7648291BC0E40020AA52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F2A7647291BC0E40020AA52 /* Assets.xcassets */; };
@@ -16,6 +18,9 @@
 		8F2A7661291BC0E40020AA52 /* FoodTuckUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A7660291BC0E40020AA52 /* FoodTuckUITestsLaunchTests.swift */; };
 		8F2A7671291BC1710020AA52 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A7670291BC1710020AA52 /* Home.swift */; };
 		8F2A7673291BC3860020AA52 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A7672291BC3860020AA52 /* HomeViewModel.swift */; };
+		8F8EB1B9291C084E003FD2A2 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8EB1B8291C084E003FD2A2 /* Menu.swift */; };
+		8F8EB1BB291C1E12003FD2A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F8EB1BA291C1E12003FD2A2 /* GoogleService-Info.plist */; };
+		B7B1B9B3CFC6CEE3ACC2D118 /* Pods_FoodTuck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A7BD3C6980284872FDE30A /* Pods_FoodTuck.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7760F4098046EECE1D076BE1 /* Pods-FoodTuck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTuck.debug.xcconfig"; path = "Target Support Files/Pods-FoodTuck/Pods-FoodTuck.debug.xcconfig"; sourceTree = "<group>"; };
+		7ADB78637917559A7ED2B0F7 /* Pods-FoodTuckTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTuckTests.release.xcconfig"; path = "Target Support Files/Pods-FoodTuckTests/Pods-FoodTuckTests.release.xcconfig"; sourceTree = "<group>"; };
+		8636B7249F53D1EBBDF3339D /* Pods-FoodTuck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTuck.release.xcconfig"; path = "Target Support Files/Pods-FoodTuck/Pods-FoodTuck.release.xcconfig"; sourceTree = "<group>"; };
 		8F2A7640291BC0E20020AA52 /* FoodTuck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTuck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2A7643291BC0E20020AA52 /* FoodTuckApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTuckApp.swift; sourceTree = "<group>"; };
 		8F2A7645291BC0E20020AA52 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +56,14 @@
 		8F2A7660291BC0E40020AA52 /* FoodTuckUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTuckUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8F2A7670291BC1710020AA52 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		8F2A7672291BC3860020AA52 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8F8EB1B8291C084E003FD2A2 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		8F8EB1BA291C1E12003FD2A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		92C50A06F59B7BF168D2442B /* Pods-FoodTuck-FoodTuckUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTuck-FoodTuckUITests.release.xcconfig"; path = "Target Support Files/Pods-FoodTuck-FoodTuckUITests/Pods-FoodTuck-FoodTuckUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A6C05C5B524710F3E69DC67F /* Pods_FoodTuckTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTuckTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9A7DBA80EB9CD919EFDB150 /* Pods-FoodTuck-FoodTuckUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTuck-FoodTuckUITests.debug.xcconfig"; path = "Target Support Files/Pods-FoodTuck-FoodTuckUITests/Pods-FoodTuck-FoodTuckUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B17EB673BAF3AE197C47135E /* Pods_FoodTuck_FoodTuckUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTuck_FoodTuckUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5A7BD3C6980284872FDE30A /* Pods_FoodTuck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTuck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D87F80B968BAAD4E7D3E94DE /* Pods-FoodTuckTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTuckTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodTuckTests/Pods-FoodTuckTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7B1B9B3CFC6CEE3ACC2D118 /* Pods_FoodTuck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C7160930B83CD5A8F6CE0D6 /* Pods_FoodTuckTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,19 +87,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23C61842278E31B0E8F8971F /* Pods_FoodTuck_FoodTuckUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32378B91611A25E2B5C786DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5A7BD3C6980284872FDE30A /* Pods_FoodTuck.framework */,
+				B17EB673BAF3AE197C47135E /* Pods_FoodTuck_FoodTuckUITests.framework */,
+				A6C05C5B524710F3E69DC67F /* Pods_FoodTuckTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8F2A7637291BC0E20020AA52 = {
 			isa = PBXGroup;
 			children = (
 				8F2A7642291BC0E20020AA52 /* FoodTuck */,
+				8F8EB1BA291C1E12003FD2A2 /* GoogleService-Info.plist */,
 				8F2A7653291BC0E40020AA52 /* FoodTuckTests */,
 				8F2A765D291BC0E40020AA52 /* FoodTuckUITests */,
 				8F2A7641291BC0E20020AA52 /* Products */,
+				9ED9319C540ED8EDAF2257E1 /* Pods */,
+				32378B91611A25E2B5C786DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				8F2A7670291BC1710020AA52 /* Home.swift */,
+				8F8EB1B8291C084E003FD2A2 /* Menu.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +190,20 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		9ED9319C540ED8EDAF2257E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7760F4098046EECE1D076BE1 /* Pods-FoodTuck.debug.xcconfig */,
+				8636B7249F53D1EBBDF3339D /* Pods-FoodTuck.release.xcconfig */,
+				A9A7DBA80EB9CD919EFDB150 /* Pods-FoodTuck-FoodTuckUITests.debug.xcconfig */,
+				92C50A06F59B7BF168D2442B /* Pods-FoodTuck-FoodTuckUITests.release.xcconfig */,
+				D87F80B968BAAD4E7D3E94DE /* Pods-FoodTuckTests.debug.xcconfig */,
+				7ADB78637917559A7ED2B0F7 /* Pods-FoodTuckTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F2A7664291BC0E40020AA52 /* Build configuration list for PBXNativeTarget "FoodTuck" */;
 			buildPhases = (
+				645B8679DCBA6FD37F0B2BA7 /* [CP] Check Pods Manifest.lock */,
 				8F2A763C291BC0E20020AA52 /* Sources */,
 				8F2A763D291BC0E20020AA52 /* Frameworks */,
 				8F2A763E291BC0E20020AA52 /* Resources */,
+				26BC2CAB429ECB72DC7D1FD7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,6 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F2A7667291BC0E40020AA52 /* Build configuration list for PBXNativeTarget "FoodTuckTests" */;
 			buildPhases = (
+				2DD7CBD84859731E9B2FC692 /* [CP] Check Pods Manifest.lock */,
 				8F2A764C291BC0E40020AA52 /* Sources */,
 				8F2A764D291BC0E40020AA52 /* Frameworks */,
 				8F2A764E291BC0E40020AA52 /* Resources */,
@@ -199,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F2A766A291BC0E40020AA52 /* Build configuration list for PBXNativeTarget "FoodTuckUITests" */;
 			buildPhases = (
+				AB733336328C53A2D08E7937 /* [CP] Check Pods Manifest.lock */,
 				8F2A7656291BC0E40020AA52 /* Sources */,
 				8F2A7657291BC0E40020AA52 /* Frameworks */,
 				8F2A7658291BC0E40020AA52 /* Resources */,
+				C1528495E7D9AB111CD67216 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,7 +289,7 @@
 				};
 			};
 			buildConfigurationList = 8F2A763B291BC0E20020AA52 /* Build configuration list for PBXProject "FoodTuck" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -263,6 +315,7 @@
 			files = (
 				8F2A764B291BC0E40020AA52 /* Preview Assets.xcassets in Resources */,
 				8F2A7648291BC0E40020AA52 /* Assets.xcassets in Resources */,
+				8F8EB1BB291C1E12003FD2A2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +335,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		26BC2CAB429ECB72DC7D1FD7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodTuck/Pods-FoodTuck-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodTuck/Pods-FoodTuck-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoodTuck/Pods-FoodTuck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DD7CBD84859731E9B2FC692 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodTuckTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		645B8679DCBA6FD37F0B2BA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodTuck-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB733336328C53A2D08E7937 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodTuck-FoodTuckUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1528495E7D9AB111CD67216 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodTuck-FoodTuckUITests/Pods-FoodTuck-FoodTuckUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodTuck-FoodTuckUITests/Pods-FoodTuck-FoodTuckUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoodTuck-FoodTuckUITests/Pods-FoodTuck-FoodTuckUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8F2A763C291BC0E20020AA52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -291,6 +447,7 @@
 				8F2A7671291BC1710020AA52 /* Home.swift in Sources */,
 				8F2A7644291BC0E20020AA52 /* FoodTuckApp.swift in Sources */,
 				8F2A7673291BC3860020AA52 /* HomeViewModel.swift in Sources */,
+				8F8EB1B9291C084E003FD2A2 /* Menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +600,7 @@
 		};
 		8F2A7665291BC0E40020AA52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7760F4098046EECE1D076BE1 /* Pods-FoodTuck.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -473,6 +631,7 @@
 		};
 		8F2A7666291BC0E40020AA52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8636B7249F53D1EBBDF3339D /* Pods-FoodTuck.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -503,6 +662,7 @@
 		};
 		8F2A7668291BC0E40020AA52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D87F80B968BAAD4E7D3E94DE /* Pods-FoodTuckTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -522,6 +682,7 @@
 		};
 		8F2A7669291BC0E40020AA52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ADB78637917559A7ED2B0F7 /* Pods-FoodTuckTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -541,6 +702,7 @@
 		};
 		8F2A766B291BC0E40020AA52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9A7DBA80EB9CD919EFDB150 /* Pods-FoodTuck-FoodTuckUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -558,6 +720,7 @@
 		};
 		8F2A766C291BC0E40020AA52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92C50A06F59B7BF168D2442B /* Pods-FoodTuck-FoodTuckUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
