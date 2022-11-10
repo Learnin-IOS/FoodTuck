@@ -24,6 +24,9 @@ class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
     // Menu
      @Published var showMenu = false
     
+    // ItemData
+    
+    @Published var items: [Item] = []
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         // Checking Location access
         
@@ -89,7 +92,32 @@ class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
             }
             
             print("Success = \(res!.user.uid)")
+            // After Logging in Fetch Data
+            self.fechData()
         }
         
     }
+    
+    
+    // MARK: - Fetching Item Data
+    func fechData(){
+        
+        let db = Firestore.firestore()
+        db.collection("Items").getDocuments { snap, err in
+            guard let itemData = snap else {return}
+            self.items = itemData.documents.compactMap({ doc -> Item? in
+                
+                let id = doc.documentID
+                let name = doc.get("item_name") as! String
+                let cost = doc.get("item_cost") as! NSNumber
+                let ratings = doc.get("item_ratings") as! String
+                let details = doc.get("item_details") as! String
+                let image = doc.get("item_image") as! String
+                
+                return Item(id: id, item_name: name, item_details: details, item_cost: cost, item_rating: ratings, item_image: image)
+            })
+        }
+    }
+    
+
 }

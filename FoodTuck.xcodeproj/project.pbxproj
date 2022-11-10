@@ -18,6 +18,8 @@
 		8F2A7661291BC0E40020AA52 /* FoodTuckUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A7660291BC0E40020AA52 /* FoodTuckUITestsLaunchTests.swift */; };
 		8F2A7671291BC1710020AA52 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A7670291BC1710020AA52 /* Home.swift */; };
 		8F2A7673291BC3860020AA52 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2A7672291BC3860020AA52 /* HomeViewModel.swift */; };
+		8F7B1821291D227B00A3D8CE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B1820291D227B00A3D8CE /* Item.swift */; };
+		8F7B1823291D2FCB00A3D8CE /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B1822291D2FCB00A3D8CE /* ItemView.swift */; };
 		8F8EB1B9291C084E003FD2A2 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8EB1B8291C084E003FD2A2 /* Menu.swift */; };
 		8F8EB1BB291C1E12003FD2A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F8EB1BA291C1E12003FD2A2 /* GoogleService-Info.plist */; };
 		B7B1B9B3CFC6CEE3ACC2D118 /* Pods_FoodTuck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A7BD3C6980284872FDE30A /* Pods_FoodTuck.framework */; };
@@ -56,6 +58,8 @@
 		8F2A7660291BC0E40020AA52 /* FoodTuckUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTuckUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8F2A7670291BC1710020AA52 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		8F2A7672291BC3860020AA52 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8F7B1820291D227B00A3D8CE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8F7B1822291D2FCB00A3D8CE /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		8F8EB1B8291C084E003FD2A2 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		8F8EB1BA291C1E12003FD2A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92C50A06F59B7BF168D2442B /* Pods-FoodTuck-FoodTuckUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTuck-FoodTuckUITests.release.xcconfig"; path = "Target Support Files/Pods-FoodTuck-FoodTuckUITests/Pods-FoodTuck-FoodTuckUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 			children = (
 				8F2A7670291BC1710020AA52 /* Home.swift */,
 				8F8EB1B8291C084E003FD2A2 /* Menu.swift */,
+				8F7B1822291D2FCB00A3D8CE /* ItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 		8F2A766E291BC1360020AA52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8F7B1820291D227B00A3D8CE /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,7 +206,6 @@
 				D87F80B968BAAD4E7D3E94DE /* Pods-FoodTuckTests.debug.xcconfig */,
 				7ADB78637917559A7ED2B0F7 /* Pods-FoodTuckTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -447,6 +452,8 @@
 				8F2A7671291BC1710020AA52 /* Home.swift in Sources */,
 				8F2A7644291BC0E20020AA52 /* FoodTuckApp.swift in Sources */,
 				8F2A7673291BC3860020AA52 /* HomeViewModel.swift in Sources */,
+				8F7B1823291D2FCB00A3D8CE /* ItemView.swift in Sources */,
+				8F7B1821291D227B00A3D8CE /* Item.swift in Sources */,
 				8F8EB1B9291C084E003FD2A2 /* Menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

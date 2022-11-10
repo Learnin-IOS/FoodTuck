@@ -56,7 +56,16 @@ struct Home: View {
                 
                 Divider()
                 
-                Spacer()
+                ScrollView(.vertical, showsIndicators: false) {
+                    
+                    VStack(spacing: 25){
+                         
+                        ForEach(HomeModel.items){ item in
+                            // Item View
+                            Text(item.item_name)
+                        }
+                    }
+                }
                 
             }
             
