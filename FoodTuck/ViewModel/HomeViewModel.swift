@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreLocation
+import Firebase
 
 
 // MARK: - Fetching User Location
@@ -52,6 +53,8 @@ class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
          // Reading user location and extracting Details
         self.userLocation = locations.last
         self.extractLocation()
+        // After extracting location Logging in ... 
+        self.login()
     }
     
     func extractLocation(){
@@ -71,5 +74,22 @@ class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
             self.userAddress = address
             
         }
+    }
+    
+    
+    
+    // MARK: - Anonymous Login for reading Database
+    
+    func login(){
+        Auth.auth().signInAnonymously{ (res, err) in
+            
+            if err != nil {
+                print(err!.localizedDescription)
+                return
+            }
+            
+            print("Success = \(res!.user.uid)")
+        }
+        
     }
 }
