@@ -62,9 +62,35 @@ struct Home: View {
                          
                         ForEach(HomeModel.items){ item in
                             // Item View
-                            Text(item.item_name)
+                            ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
+                                ItemView(item: item )
+                                
+                                HStack{
+                                    Text("FREE DELIVERY")
+                                        .foregroundColor(.white)
+                                        .padding(.vertical, 10)
+                                        .padding(.horizontal)
+                                        .background(Color("PrimaryColor"))
+                                    Spacer(minLength: 0)
+                                    
+                                    Button {
+                                         
+                                    } label: {
+                                        Image(systemName: "plus")
+                                            .foregroundColor(.white)
+                                            .padding(10)
+                                            .background(Color("PrimaryColor"))
+                                            .clipShape(Circle())
+                                    }
+
+                                }
+                                .padding(.trailing, 10)
+                                .padding(.top, 10 )
+                            })
+                            .frame(width: UIScreen.main.bounds.width -  30)
                         }
                     }
+                    .padding(.top, 10)
                 }
                 
             }
