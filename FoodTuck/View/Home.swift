@@ -71,12 +71,12 @@ struct Home: View {
                                     Spacer(minLength: 0)
                                     
                                     Button {
-                                         
+                                        HomeModel.addToCart(item: item)
                                     } label: {
-                                        Image(systemName: "plus")
+                                        Image(systemName: item.isAdded ? "checkmark" : "plus")
                                             .foregroundColor(.white)
                                             .padding(10)
-                                            .background(Color("PrimaryColor"))
+                                            .background(item.isAdded ? Color.green : Color("PrimaryColor") )
                                             .clipShape(Circle())
                                     }
 

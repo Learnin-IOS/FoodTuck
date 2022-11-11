@@ -27,6 +27,10 @@ class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
     // ItemData
     @Published var items: [Item] = []
     @Published var filtered: [Item] = []
+    
+    // Cart Data...
+    
+    @Published var cartItems : [Cart] = []
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         // Checking Location access
         
@@ -131,5 +135,37 @@ class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
         }
     }
     
+    // Add to cart function...
+    
+    func addToCart(item: Item){
+         // checking whether item is added to cart
+        
+        self.items[getIndex(item: item, isCartIndex: false)].isAdded = !item.isAdded
+        
+        //updating filtered array for search bar results
+        self.filtered[getIndex(item: item, isCartIndex: false)].isAdded = !item.isAdded
+        
+        if item.isAdded{
+            
+            // removing from list..
+            self.cartItems.remove(at: getIndex(item: item, isCartIndex: true))
+            return
+        }
+         // else adding
+        
+        self.cartItems.append(Cart(item: item, quantity: 1))
+    }
+    
+    func getIndex(item: Item, isCartIndex: Bool) -> Int {
+        let index = self.items.firstIndex { item1 -> Bool in
+            return item.id == item1.id
+        } ?? 0
+        
+        let cartIndex = self.cartItems.firstIndex { item1 -> Bool in
+            return item.id == item1.item.id
+        } ?? 0
+        
+        return isCartIndex ? cartIndex : index
+    }
 
 }
