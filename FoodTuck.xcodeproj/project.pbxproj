@@ -21,6 +21,7 @@
 		8F7B1821291D227B00A3D8CE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B1820291D227B00A3D8CE /* Item.swift */; };
 		8F7B1823291D2FCB00A3D8CE /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7B1822291D2FCB00A3D8CE /* ItemView.swift */; };
 		8F825E34291E470600E2133C /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F825E33291E470600E2133C /* Cart.swift */; };
+		8F825E36291E4E4700E2133C /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F825E35291E4E4700E2133C /* CartView.swift */; };
 		8F8EB1B9291C084E003FD2A2 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8EB1B8291C084E003FD2A2 /* Menu.swift */; };
 		8F8EB1BB291C1E12003FD2A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F8EB1BA291C1E12003FD2A2 /* GoogleService-Info.plist */; };
 		8FC740B8291D36D00022C079 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8FC740B7291D36D00022C079 /* SDWebImageSwiftUI */; };
@@ -63,6 +64,7 @@
 		8F7B1820291D227B00A3D8CE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		8F7B1822291D2FCB00A3D8CE /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		8F825E33291E470600E2133C /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		8F825E35291E4E4700E2133C /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		8F8EB1B8291C084E003FD2A2 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		8F8EB1BA291C1E12003FD2A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92C50A06F59B7BF168D2442B /* Pods-FoodTuck-FoodTuckUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTuck-FoodTuckUITests.release.xcconfig"; path = "Target Support Files/Pods-FoodTuck-FoodTuckUITests/Pods-FoodTuck-FoodTuckUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				8F2A7670291BC1710020AA52 /* Home.swift */,
 				8F8EB1B8291C084E003FD2A2 /* Menu.swift */,
 				8F7B1822291D2FCB00A3D8CE /* ItemView.swift */,
+				8F825E35291E4E4700E2133C /* CartView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F825E36291E4E4700E2133C /* CartView.swift in Sources */,
 				8F2A7646291BC0E20020AA52 /* ContentView.swift in Sources */,
 				8F2A7671291BC1710020AA52 /* Home.swift in Sources */,
 				8F2A7644291BC0E20020AA52 /* FoodTuckApp.swift in Sources */,
