@@ -22,7 +22,7 @@ class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
     @Published var noLocation = false
     
     // Menu
-     @Published var showMenu = false
+    @Published var showMenu = false
     
     // ItemData
     @Published var items: [Item] = []
@@ -31,6 +31,9 @@ class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
     // Cart Data...
     
     @Published var cartItems : [Cart] = []
+    @Published var ordered = false
+    
+    
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         // Checking Location access
         
@@ -57,10 +60,10 @@ class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-         // Reading user location and extracting Details
+        // Reading user location and extracting Details
         self.userLocation = locations.last
         self.extractLocation()
-        // After extracting location Logging in ... 
+        // After extracting location Logging in ...
         self.login()
     }
     
@@ -138,12 +141,16 @@ class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
     // Add to cart function...
     
     func addToCart(item: Item){
-         // checking whether item is added to cart
+        // checking whether item is added to cart
         
         self.items[getIndex(item: item, isCartIndex: false)].isAdded = !item.isAdded
         
         //updating filtered array for search bar results
-        self.filtered[getIndex(item: item, isCartIndex: false)].isAdded = !item.isAdded
+        let filteredIndex = self.filtered.firstIndex { item1 -> Bool in
+            return item.id == item1.id
+        } ?? 0
+        
+        self.filtered[filteredIndex].isAdded = !item.isAdded 
         
         if item.isAdded{
             
@@ -151,7 +158,7 @@ class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
             self.cartItems.remove(at: getIndex(item: item, isCartIndex: true))
             return
         }
-         // else adding
+        // else adding
         
         self.cartItems.append(Cart(item: item, quantity: 1))
     }
@@ -189,7 +196,54 @@ class HomeViewModel: NSObject, ObservableObject, CLLocationManagerDelegate{
         
     }
     
+    //  Writing oder Data into Firebase
+    
+    func updateOrder(){
+        
+        let db = Firestore.firestore()
+        
+        // creating dict of food Details
+        if ordered {
+            
+            ordered = false
+            db.collection("Users").document(Auth.auth().currentUser!.uid).delete() { err in
+                
+                if err != nil {
+                    self.ordered = true
+                }
+            }
+            return
+        }
+        
+        
+        
+        // creating dict of food details  ...
+        var details : [[String : Any]] = []
+        cartItems.forEach { cart in
+            details.append([
+                "item_name": cart.item.item_name,
+                "item_quantity": cart.quantity,
+                "item_cost" :cart.item.item_cost
+            ])
+        }
+        
+        ordered = true
+        db.collection("Users").document(Auth.auth().currentUser!.uid).setData([
+            "ordered_food":details,
+            "total_cost" : calculateTotalPrice(),
+            "location" : GeoPoint(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+            
+        ]) {
+            err in
+            if err != nil {
+                self.ordered = false
+                return
+            }
+            
+        }
+        
+    }
     
     
-
+    
 }
