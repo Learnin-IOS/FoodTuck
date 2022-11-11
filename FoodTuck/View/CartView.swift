@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct CartView: View {
     @ObservedObject  var homeData: HomeViewModel
@@ -14,16 +15,17 @@ struct CartView: View {
         VStack {
             HStack(spacing: 20) {
                 Button (action: {present.wrappedValue.dismiss()})
-                 {
-                    Image(systemName: "chevrom.left")
+                    {
+                    Image(systemName: "chevron.left")
                         .font(.system(size: 26, weight: .heavy))
-                        .foregroundColor(Color("PrimaryColor"))
+                        .foregroundColor(Color("AlloyOrange"))
+                    
                 }
-                
                 Text("My Cart")
                     .font(.title)
                     .fontWeight(.heavy)
                     .foregroundColor(.black)
+         
                 
                 Spacer()
                     
@@ -36,7 +38,7 @@ struct CartView: View {
                     ForEach(homeData.cartItems) { cart in
                         // Cart View
                         HStack(spacing: 15) {
-                            Image(cart.item.item_image)
+                            WebImage(url: URL(string:cart.item.item_image))
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 130, height: 130)
@@ -49,6 +51,9 @@ struct CartView: View {
                                 Text(cart.item.item_details)
                                     .fontWeight(.semibold)
                                     .foregroundColor(.gray)
+                                    .lineLimit(2)
+                                
+                                
                                 HStack(spacing: 15) {
                                     
                                     Text(homeData.getPrice(value: Float(truncating: cart.item.item_cost)))
@@ -59,19 +64,38 @@ struct CartView: View {
                                     Spacer(minLength: 0)
                                     
                                     // Add - Sub Button...
+//                                    Button {
+//                                        if cart.quantity > 1{
+//                                            homeData.cartItems[homeData.getIndex(item: cart.item, isCartIndex: true)].quantity -= 1
+//                                            print("Removed")
+//                                    } label: {
+//                                        Image(systemName: "minus")
+//                                            .font(.system(size:16, weight: .heavy))
+//                                            .foregroundColor(.black)
+//                                    }
+                                        
+
                                     Button(action: {
                                         if cart.quantity > 1{
                                             homeData.cartItems[homeData.getIndex(item: cart.item, isCartIndex: true)].quantity -= 1
+                                            print("Removed")
                                         }
                                     }) {
                                         Image(systemName: "minus")
                                             .font(.system(size:16, weight: .heavy))
                                             .foregroundColor(.black)
                                     }
+                                    Text("\(cart.quantity)")
+                                        .fontWeight(.heavy)
+                                        .foregroundColor(.black)
+                                        .padding(.vertical, 5)
+                                        .padding(.horizontal, 10)
+                                        .background(Color.black.opacity(0.06))
+                                    
+                                    
                                     Button(action: {
-                                        if cart.quantity > 1{
                                             homeData.cartItems[homeData.getIndex(item: cart.item, isCartIndex: true)].quantity += 1
-                                        }
+                                            print("Added")
                                     }) {
                                         Image(systemName: "plus")
                                             .font(.system(size:16, weight: .heavy))
@@ -79,6 +103,21 @@ struct CartView: View {
                                     }
                                 }
                             }
+                        }
+                        .padding()
+                        
+                        // For Deleting Order
+                        Button(action: {
+                            // deleting items from cart
+                            let index = homeData.getIndex(item: cart.item, isCartIndex: true)
+                            let itemIndex = homeData.getIndex(item: cart.item, isCartIndex: false)
+                            
+                            homeData.items[itemIndex].isAdded = false
+                            homeData.filtered[itemIndex].isAdded = false
+                            
+                            homeData.cartItems.remove(at: index)
+                        }) {
+                            Text("Remove")
                         }
                     }
                 }
@@ -100,8 +139,8 @@ struct CartView: View {
                 }
                 .padding([.top, .horizontal])
                 
-                Button(action: {}) {
-                    Text("Check Out")
+                Button(action: homeData.updateOrder ) {
+                    Text(homeData.ordered ? "Cancel Order" : "Check Out")
                         .font(.title2)
                         .fontWeight(.heavy)
                         .foregroundColor(.white)
@@ -109,7 +148,7 @@ struct CartView: View {
                         .frame(width: UIScreen.main.bounds.width - 30)
                         .background(
                         
-                            LinearGradient(gradient: .init(colors: [Color("PrimaryColor"), Color.white]), startPoint: .leading, endPoint: .trailing)
+                            LinearGradient(gradient: .init(colors: [Color("PrimaryColor"), Color("AlloyOrange")]), startPoint: .leading, endPoint: .trailing)
                         )
                         .cornerRadius(15)
                 }
