@@ -11,11 +11,15 @@ struct ContentView: View {
     
     @StateObject var HomeModel = HomeViewModel()
     var body: some View {
-        Home()
-            .onAppear(perform: {
-                       // Calling Localized Delegate
-                       HomeModel.locationManager.delegate = HomeModel
-            })
+        NavigationView {
+            Home()
+                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
+                .onAppear(perform: {
+                           // Calling Localized Delegate
+                           HomeModel.locationManager.delegate = HomeModel
+                })
+        }
     }
 }
 
