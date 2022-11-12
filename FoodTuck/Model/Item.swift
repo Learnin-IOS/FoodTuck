@@ -16,6 +16,6 @@ struct Item: Identifiable{
     var item_rating: String
     var item_image: String
     
-    // to identify wheter it is added to Cart
+    // to identify whether it is added to Cart
     var isAdded: Bool = false
 }
